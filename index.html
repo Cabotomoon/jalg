@@ -886,16 +886,17 @@
     <div class="section-divider left"></div>
     <p>Déjanos tus datos y un asesor se comunicará contigo a la brevedad.</p>
     <form id="contactForm" onsubmit="handleSubmit(event)">
+      <form action="enviarmensaje.php" method="POST">
       <div class="form-row">
-        <div class="form-field"><input type="text" placeholder="Nombre completo" required /></div>
-        <div class="form-field"><input type="text" placeholder="Empresa" /></div>
+        <div class="form-field"><input type="text" id="name" placeholder="Nombre completo" required /></div>
+        <div class="form-field"><input type="text" id="empresa" placeholder="Empresa" required/></div>
       </div>
       <div class="form-row">
-        <div class="form-field"><input type="tel" placeholder="Teléfono / WhatsApp" /></div>
-        <div class="form-field"><input type="email" placeholder="Correo electrónico" /></div>
+        <div class="form-field"><input type="tel" id="phone" placeholder="Teléfono / WhatsApp" required/></div>
+        <div class="form-field"><input type="email" id="email" placeholder="Correo electrónico" required/></div>
       </div>
       <div class="form-field">
-        <textarea placeholder="Cuéntanos tu necesidad"></textarea>
+        <textarea id="datos" placeholder="Cuéntanos tu necesidad" required/></textarea>
       </div>
       <div class="form-actions">
         <button type="submit" class="btn-submit" id="submitBtn">Enviar Solicitud</button>
@@ -955,7 +956,7 @@
 </footer>
 
 <!-- WhatsApp flotante -->
-<a href="https://wa.me/51939864391" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+<a href="https://wa.me/51999999999" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
   <i class="fa-brands fa-whatsapp" style="font-size:28px; color:white;"></i>
 </a>
 
