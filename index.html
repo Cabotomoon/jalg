@@ -1099,6 +1099,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
 
       if (response.ok) {
+        // Avisar a Google Tag Manager
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+      event: 'form_submit_success',
+      form_name: 'Contacto',
+      page_location: window.location.href
+      });
         btn.textContent = '✓ ¡Mensaje enviado!';
         btn.style.background = '#22c55e';
         btn.style.borderColor = '#22c55e';
